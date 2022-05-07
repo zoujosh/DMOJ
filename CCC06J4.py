@@ -8,7 +8,7 @@ Created on Sat Dec 18 18:24:08 2021
 task_list = [1,2,3,4,5,6,7]
 new_list = []
 add_list = []
-completed = "Yes"
+completed = True
 
 prerequisite_list = [1,1,2,3,3]
 postrequisite_list = [7,4,1,4,5]
@@ -30,7 +30,7 @@ while len(postrequisite_list) > 0:
             task_list.remove(postrequisite_list[k])
             
     if len(task_list) < 1:
-        completed = "No"
+        completed = False
         break
     else:
         new_list.append(task_list[0])
@@ -62,8 +62,8 @@ if len(new_list) < 7:
     new_list.extend(add_list)
 
 
-if completed == "No":
+if completed == False:
     print("Cannot complete these tasks. Going to bed.")
-elif completed == "Yes":
+elif completed == True:
     for i in range (0,len(new_list)):
         print(new_list[i], end = " ")
