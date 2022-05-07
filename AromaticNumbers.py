@@ -32,9 +32,6 @@ for i in range (1,len(b_list)):
         op_list.append('+');
 op_list.append('+');
         
-#for i in range (len(op_list)):
-    #print (op_list[i]);
-    
 for i in range (int(len(a_list)/2)):
     if (op_list[i] == '+'):
         count += int(a_list[i*2])*equivalent_num.get(a_list[i*2+1]);
